@@ -1,0 +1,16 @@
+{
+    "name": "zero-studios/solution",
+    "description": "The solution.",
+    "version": "1.0.1",
+    "require": {
+        "slim/slim": "^4.5",
+        "sendgrid/sendgrid": "^7.6",
+        "prismic/php-sdk": "^5.1",
+        "phpclassic/php-shopify": "^1.1",
+        "elasticsearch/elasticsearch": "^7.8",
+        "giggsey/libphonenumber-for-php": "^8.12",
+        "slim/psr7": "^1.1",
+        "middlewares/trailing-slash": "^2.0",
+        "squizlabs/php_codesniffer": "*"
+    }
+}

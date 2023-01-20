@@ -1,0 +1,165 @@
+.footer {
+	background: #0A0815;
+	z-index: 4;
+	position: relative;
+	@include get-vw(padding-bottom, 25px, 25px);
+	.bar {
+		top: 0;
+		display: flex;
+		width: calc(100% - 2.777vw);
+		position: absolute;
+		transform: translateY(calc(-100% + 1px));
+		background: #1A192E;
+		border-radius: 35px 35px 0 0;
+		@include get-vw(height, 59px, 59px);
+	}
+	.footer-inner {
+		width: 100%;
+		background: #1A192E;
+		border-radius: 0 0 35px 35px;
+		@include get-vw(padding-top, 18px, 18px);
+		@include get-vw(padding-bottom, 62px, 50px);
+	}
+	.top {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		@include get-vw(padding-bottom, 160px, 130px);
+		.left {
+			display: flex;
+			align-items: flex-start;
+			//width: 50%;
+		}
+		.right {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			.title {
+				font-family:  $fieldWork;
+				line-height: 1.10;
+				letter-spacing: -0.04em;
+				color: #E1DDEA;
+				margin-bottom: 14px;
+				@include get-vw(font-size, 32px, 26px);
+				strong {
+					font-family: $ivyModeItalic;
+				}
+			}
+			.text {
+				font-family: $fieldWorkLt;
+				line-height: 1.3;
+				color: #CACACA;
+				@include get-vw(margin-bottom, 24px, 24px);
+				@include get-vw(font-size, 16px, 16px);
+			}
+		}
+		.contact {
+			width: 100%;
+			.input-wrapper {
+				input {
+					font-family: $fieldWork;
+					padding: 0 24px;
+					font-size: 16px;
+					height: 64px;
+					display: flex;
+					align-items: center;
+					width: 100%;
+					background: #22213B;
+					border-radius: 15px;
+					border: 1px solid transparent;
+					transition: all .2s $ease-in-out-sine;
+					color: #585689;
+					&:focus {
+						background: $white;
+						color: #585689;
+					}
+					&::placeholder {
+						font-family: $fieldWork;
+						font-size: 16px;
+						line-height: 1;
+						color: #585689;
+					}
+				}
+			}
+		}
+		.col {
+			@include get-vw(margin-right, 126px);
+			@include get-vw(min-width, 45px);
+			h6 {
+				font-family: $fieldWork;
+				line-height: 1;
+				color: #9180AB;
+				@include get-vw(font-size, 16px, 16px);
+				@include get-vw(margin-bottom, 32px, 24px);
+			}
+			.drawer-items {
+				font-family: $fieldWork;
+				line-height: 1;
+				color: #DAD0FF;
+				@include get-vw(font-size, 16px, 16px);
+				//@include get-vw(margin-bottom, 32px, 24px);
+				display: flex;
+				align-items: flex-start;
+				flex-direction: column;
+				white-space: nowrap;
+				a {
+					@include get-vw(margin-bottom, 24px, 18px);
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.socials {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 16px;
+			@include get-vw(margin-top, 35px, 28px);
+		}
+	}
+	.bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		@include get-vw(padding-left, 107px);
+		.left {
+			font-family: $fieldWork;
+			font-size: 14px;
+			line-height: 1.5;
+			color: #FFFFFF;
+			max-width: 525px;
+			.disclaimer {
+				font-family: $fieldWorkLt;
+				margin-bottom: 17px;
+			}
+		}
+		.right {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+		.credit-cards {
+			display: flex;
+			align-items: center;
+			justify-self: flex-end;
+			gap: 15px;
+			margin-bottom: 24px;
+			svg {
+				max-width: 30px;
+			}
+		}
+		.utility-pages {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 24px;
+			font-family: $fieldWork;
+			font-size: 14px;
+			line-height: 1;
+			color: #DAD0FF;
+			white-space: nowrap;
+		}
+	}
+}

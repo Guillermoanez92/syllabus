@@ -1,0 +1,69 @@
+/*
+	FONTS
+
+	- Import all of our fonts
+-------------------------------------------------- */
+
+
+/*
+	ABSTRACTS
+
+	- Helpers/utils and non-output snippets only
+	- Global variables, mixins, functions etc
+-------------------------------------------------- */
+@import "/abstracts/variables";
+@import "/abstracts/mixins";
+
+/*
+	BASE
+
+	- Global styles
+	- Typography, custom reset styles etc
+-------------------------------------------------- */
+@import "/base/custom-reset";
+@import "/base/typography";
+
+/*
+	COMPONENTS
+
+	- Components reusable across the project
+-------------------------------------------------- */
+//@import "/layout/wysiwyg";
+@import "/ecomm/mini-cart";
+@import "/ecomm/add-to-cart";
+
+/*
+	GLOBAL LAYOUT
+
+	- Styles for the main sections of the layout
+	- Header, footer, navigation, grid etc
+-------------------------------------------------- */
+@import "/layout/navigation";
+@import "/layout/shared";
+@import "/layout/forms";
+@import "/ecomm/mini-cart";
+@import "/layout/header";
+@import "/layout/footer";
+@import "/layout/global";
+/*
+	PLUGINS
+
+	- Third party plugins
+-------------------------------------------------- */
+
+
+/*
+	PAGES / LOCAL TEMPLATES
+-------------------------------------------------- */
+// @import "/lib/framework/prismic-php/css/pages/home";
+@import "/sections/hero-section";
+@import "/sections/product-trio";
+@import "/sections/formula-section";
+@import "/sections/fifty-fifty-left";
+@import "/sections/fifty-fifty-slider";
+@import "/sections/instagram-section";
+@import "/sections/faq-section";
+@import "/sections/fifty-fifty-images";
+
+
+

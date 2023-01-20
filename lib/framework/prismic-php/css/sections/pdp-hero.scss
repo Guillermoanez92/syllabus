@@ -1,0 +1,430 @@
+.pdp-hero {
+    background: #1A192E;  
+    .slider {
+      overflow: unset;
+    }      
+    .c-175 {
+        align-items: flex-start;
+        padding-top: 130px;
+        padding-bottom: 48px;       
+        @media screen and (min-width: 1656px) {
+          max-width: 1656px;
+        }
+    }
+    h1 {
+      font-family: $fieldWork;    
+      font-size: 56px;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: #E1DDEA;
+      margin-bottom: 16px;
+    }
+    .review-overview {
+      margin: 0 0 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      p {
+          font-family: $fieldWorkLt;
+          font-size: 16px;
+          line-height: 1.3;
+          color: #FFFFFF;
+          margin-left: 4px;
+      } 
+    }
+    .left {
+      min-width: 65%;
+      display: flex;
+      @include get-vw(padding-right, 56px);
+      @include get-vw(gap, 10px);
+      align-items: stretch;
+      position: sticky;
+      top: 130px;
+      max-height: 100%;
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 750px;
+      margin-right: auto;
+    }
+    .thumbnails {
+      max-width: 135px;
+      min-width: 75px;
+      width: 7.8vw;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      @include get-vw(gap, 8px);
+      img {
+        height: 100%;
+        position: absolute;
+      }
+      .thumbnail {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        cursor: pointer;
+        opacity: 0.8;
+        border: 2px solid transparent;
+        position: relative;
+        transition: .25s all $ease-in-out-sine;
+        @include get-vw(border-radius, 15px, 15px);
+        overflow: hidden;
+        background-color: #242237;
+        &.active {
+          opacity: 1;
+          border: 2px solid #DAD0FF;
+        }
+      }
+    }
+    .main {
+      @include get-vw(border-radius, 10px, 10px);
+      overflow: hidden;
+      flex: 1;
+      position: relative;
+     
+      .slides {
+        height: 0;
+        padding-bottom: 100%;
+        width: 100%;      
+        overflow: unset;  
+        .inner {
+          height: 100%;
+          position: absolute;
+        }
+      }
+      .slide {
+        min-width: 100%;
+        margin-right: 8px;
+        background-color: #0C0B15;
+        img {
+          height: 100%;
+          mix-blend-mode: multiply;
+        }
+      }
+    }
+    .product-description {
+      margin-bottom: 16px;
+      line-height: 1.33;
+    }
+  
+    .assets-list {
+      margin-bottom: 32px;
+      padding-left: 0;
+      li {
+        margin-bottom: 8px;
+        line-height: 1;        
+        display: flex;
+        list-style: none;
+        font-family: $fieldWorkLt;
+        font-size: 16px;
+        line-height: 1;
+        align-items: center;
+        color: #DAD0FF;
+        gap: 16px;
+        svg {
+            width: auto;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .option-header {    
+        font-family: $fieldWorkLt;    
+        font-size: 18px;
+        line-height: 1;
+        color: #DAD0FF; 
+        margin-bottom: 16px;
+        span {
+            color: #E1DDEA;
+        }
+    }
+    .option-description {
+        background: #110C1C;
+        border: 1px dashed #DAD0FF;
+        border-radius: 100px;
+        font-family: $fieldWorkLt;        
+        font-size: 16px;
+        line-height: 1;        
+        color: #DAD0FF;
+        padding: 7px 16px 9px;
+        margin-bottom: 16px;
+    }
+    .option-wrapper {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+    .option {
+        height: 64px;
+        width: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        &.active {
+            pointer-events: none;
+            svg:first-of-type {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        html:not(.touch) & {
+          &:hover {
+            svg:first-of-type {
+                        visibility: visible;
+                        opacity: .6;
+                    }
+          }
+		    }
+        svg {
+            position: relative;
+            z-index: 1;
+            transition: .25s all $ease-in-out-sine;
+            &:first-of-type {
+                position: absolute;
+                z-index: 2;
+                left: 0;
+                top: 0;
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+    }  
+    .atc-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      .bottom {
+        display: flex;
+        width: 100%;
+        gap: 8px;
+      }
+    }
+    .increment-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 119px;
+        height: 56px;
+        border: 1px dashed #FFFFFF;
+        border-radius: 100px;
+        padding: 0 16px;        
+    }
+    .increment {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .count {
+        font-family: $fieldWork;
+        font-size: 18px;
+        line-height: 1;
+        color: #DAD0FF;
+    }
+    .add-to-cart {
+        width: 100%;
+        background: #DAD0FF;
+        border: 1px solid #A49AC8;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $fieldWork;
+        font-size: 18px;
+        line-height: 1;
+        color: #1A192E;
+        transition: .25s all $ease-in-out-sine;
+        html:not(.touch) & {
+          &:hover {
+            background: #1A192E;
+            color: #DAD0FF;
+          }
+		    }
+    }
+    .subscription {
+        background: #1A192E;
+        border: 1px dashed #FFFFFF;
+        border-radius: 100px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px 16px;
+        transition: .25s all $ease-in-out-sine;
+        &:first-of-type {
+            margin-bottom: 8px;
+        }
+        &:last-of-type {
+            margin-bottom: 24px;
+        }
+        &.active {
+            background: #DAD0FF;
+            .inner {
+                color: #1A192E;
+            }
+            .price span {
+                color: #1A192E;
+            } 
+        }
+        .inner {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #DAD0FF;
+            font-family: $fieldWorkLt;
+            font-size: 18px;
+            line-height: 1;
+            transition: .25s all $ease-in-out-sine;
+        }
+        svg {
+            width: auto;
+        }
+        html:not(.touch) & {
+			&:hover {
+                background: #DAD0FF;
+                .inner {
+                    color: #1A192E;
+                }
+                .price span {
+                    color: #1A192E;
+                } 
+			}
+		}
+    }
+    .price {
+        display: flex;
+        gap: 4px;
+        transition: .25s all $ease-in-out-sine;
+        span {
+            font-family: $fieldWorkLt;                
+            font-size: 18px;
+            line-height: 1;
+            color: #DAD0FF;
+            transition: .25s all $ease-in-out-sine;
+        }
+        .compare {
+            color: #7D7D7D;
+            font-size: 16px;
+            text-decoration: line-through;
+        }
+    }
+    .pdp-drawer {
+        position: relative;
+        .drawer {
+            overflow: hidden;
+            cursor: pointer;
+            @include get-vw(padding-top, 15px, 15px);            
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px dashed #FFFFFF;
+            width: 100%;      
+            &:first-of-type {
+                border-top: 1px dashed #FFFFFF;
+            }                  
+            &.open {
+                h6 {
+                    svg {
+                        transform: rotate(-135deg);
+                        
+                    }
+                }
+            }
+    
+        }
+        h6 {            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: $fieldWork;            
+            font-size: 18px;
+            line-height: 1.3;
+            color: #FFFFFF;
+            @include get-vw(padding-bottom, 18px, 18px);    
+            svg {
+                width: auto;
+                transition: .25s all $ease-in-out-sine;
+            }
+        }
+        .drawer-items {
+        
+            > * {
+                font-family: $fieldWorkLt;
+                font-size: 18px;
+                line-height: 1.3;
+                color: #E1DDEA;
+                padding-bottom: 32px;
+            }
+        }
+    }
+
+    @include bp-959 {
+      padding-bottom: 90px;
+    }
+    @include bp-767 {
+      padding-bottom: 40px;
+      .right {
+        width: 100%;
+        // padding-right: 0;
+      }
+      .disclaimer {
+        margin-bottom: 16px;
+        font-size: 12px;
+      }
+      .atc-form {
+        margin-bottom: 44px;
+      }
+      .pdp-drawer {
+        h6 {
+          margin-left: 8px;
+        }
+        .drawer-items {
+          margin-left: 5px;
+        }
+      }
+      .discount {
+        font-size: 12px;
+        white-space: nowrap;
+      }      
+      .c-72 {
+        flex-direction: column;
+      }
+      .vertical {
+        display: none;
+      }
+      .arrow {
+        display: none;
+      }
+      .left {
+        width: calc(100% + 50px);
+        left: -20px;
+      }
+      .slider {
+        .slide {
+          border-radius: 0;
+        }
+      }
+      .product-description {
+        margin-bottom: 8px;
+        line-height: 1.5;
+      }
+      .product-title {
+        font-size: 24px;
+        padding-right: 10vw;
+      }
+      .assets-list {
+        li {
+          line-height: 1;
+        }
+      }
+    }
+  }

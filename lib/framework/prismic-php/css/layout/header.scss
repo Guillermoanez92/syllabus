@@ -1,0 +1,229 @@
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	justify-content: space-between;
+	z-index: 100;
+	width: 100%;
+	.logo {
+		width: auto;
+		max-height: 48px;
+		transition: all .2s $ease-in-out-sine;
+
+	}
+	.pencil-bar {
+		font-family: $fieldWork;
+		background: #BAA6D9;
+		font-size: 18px;
+		line-height: 1;
+		text-align: center;
+		color: #1A192E;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		width: 100%;
+		z-index: 99;
+		@include get-vw(font-size, 18px, 16px);
+	}
+	nav {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		transition: all .35s $ease-in-out-sine;
+		padding-top: 32px;
+		height: 112px;
+		position: relative;
+		> * {
+			z-index: 2;
+		}
+		a, button {
+			transition: all .2s $ease-in-out-sine;
+			font-family: $fieldWork;
+			line-height: 1;
+			color: #E1DDEA;
+			@include get-vw(font-size, 18px, 18px);
+		}
+		a {
+			@include get-vw(margin-right, 30px, 24px);
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+		&.change-color {
+			.mini-cart-trigger {
+				span {
+					color: #FFFFFF;
+					background: #1A192E;
+					transform: translateZ(0);
+				}
+			}
+			a {
+				color: #1A192E;
+				transform: translateZ(0);
+			}
+			button {
+				color: #1a192e;
+			}
+			.logo {
+				svg {
+					path {
+						fill: #000000;
+						transform: translateZ(0);
+					}
+				}
+			}
+		}
+	}
+	.bg-white {
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+		background: #FFFFFF;
+	}
+	.left {
+		left: -10px;
+		min-height: 100%;
+		align-self: stretch;
+		button {
+			min-height: 100%;
+		}
+	}
+	.left, .right {
+		display: flex;
+		align-items: center;
+	}
+
+	.nav-trigger {
+		padding-left: 10px;
+		@include get-vw(margin-right, 15px, 12px);
+		@include get-vw(padding-right, 15px, 12px);
+	}
+	.mini-cart-trigger {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		@include get-vw(margin-left, 44px, 35px);
+
+		span {
+			transition: .2s all $ease-in-out-sine;
+			font-family: $fieldWork;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			font-size: 14px;
+			line-height: 1;
+			color: #1A192E;
+			background: #FFFFFF;
+			border-radius: 50%;
+			width: 22px;
+			height: 22px;
+		}
+	}
+	.nav-drawer {
+		left: 0;
+		display: flex;
+		overflow: hidden;
+		justify-content: space-between;
+		width: 100%;
+		position: absolute;
+		top: 100%;
+		cursor: default;
+		background-color: #F3F3F3;
+		max-height: 480px;
+		@include get-vw(height, 480px, 480px);
+		opacity: 0;
+		visibility: hidden;
+
+		.inner {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			padding-top: 24px;
+			padding-bottom: 24px;
+		}
+	}
+	.nav-tile {
+		width: calc(33.33% - 8px);
+		height: 100%;
+		border-radius: 10px;
+		display: flex;
+		position: relative;
+		overflow: hidden;
+		transition: .25s all $ease-in-out-sine;
+
+		.image-wrapper {
+			position: relative;
+
+			img {
+				display: flex;
+				height: 100%;
+				position: relative;
+				z-index: 1;
+				transition: .25s all $ease-in-out-sine;
+
+				&:nth-of-type(2) {
+					position: absolute;
+					opacity: 0;
+					visibility: hidden;
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+
+		html:not(.touch) & {
+			&:hover {
+				img {
+					opacity: 0;
+					visibility: hidden;
+
+					&:nth-of-type(2) {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+	.text-wrapper {
+		display: flex;
+		flex-direction: column;
+		background: linear-gradient(180deg, rgba(21, 18, 33, 0) 0%, #151221 56.77%);
+		z-index: 2;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 34px 0;
+		gap: 7px;
+		.title {
+			font-family: $fieldWork;
+			font-size: 32px;
+			line-height: 1.2;
+			text-align: center;
+			letter-spacing: -0.04em;
+			color: #DAD0FF;
+			strong {
+				font-family: $ivyModeItalic;
+			}
+		}
+		.subtitle {
+			font-size: 18px;
+			line-height: 1.2;
+			text-align: center;
+			letter-spacing: -0.04em;
+			color: #DAD0FF;
+			font-family: $ivyMode;
+		}
+	}
+}
+
+

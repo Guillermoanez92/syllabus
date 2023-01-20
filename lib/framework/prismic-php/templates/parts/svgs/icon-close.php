@@ -1,0 +1,1 @@
+<svg viewbox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><title>Close</title><path vector-effect="non-scaling-stroke" d="M8.713 0L5 3.713 1.3 0 0 1.3 3.713 5 0 8.713 1.3 10 5 6.3 8.713 10 10 8.713 6.3 5 10 1.3z" fill-rule="evenodd" fill="#000"></path></svg>

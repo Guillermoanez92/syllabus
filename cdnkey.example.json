@@ -1,0 +1,14 @@
+/* 
+ *	Instructions to generate this file
+ *
+ *	- Go to APIs & Services
+ *	- Click "Cloud DNS API"
+ *	- Click "Credentials"
+ *	- Click "Create Credentials" and then "Service account"
+ *	- Give it a name and click "Create"
+ *	- Select "Storage" then "Storage Object Viewer"
+ *	- Click "Create Key"
+ *	- Select "JSON" and hit "Create"
+ *	- Save to "cdnkey.json" in the root of this project
+ *
+ */

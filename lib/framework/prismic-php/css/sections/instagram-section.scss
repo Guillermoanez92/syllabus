@@ -1,0 +1,64 @@
+.instagram {
+	width: 100%;
+	background: #120D1D;
+	position: relative;
+	@include get-vw(padding-top, 65px, 52px);
+	.top {
+		justify-content: space-between;
+		width: 100%;
+		@include get-vw(margin-bottom, 58px, 46px);
+		position: relative;		
+		z-index: 2;
+	}
+	h6 {
+		font-family: $fieldWork;
+		line-height: 1.10;
+		letter-spacing: -0.04em;
+		color: #FFFFFF;
+		@include get-vw(max-width, 220px, 200px);
+		@include get-vw(font-size, 56px, 45px);
+		strong {
+			font-family: $ivyModeItalic;
+		}
+	}
+	.marquee {
+		overflow-x: hidden;
+		width: 100%;
+		z-index: 2;
+		img {
+			@include get-vw(width, 300px, 200px);
+			@include get-vw(height, 300px, 200px);
+			margin: 0 4px;
+			border-radius: 10px;
+		}
+	}
+	 .inner {
+		width: 100%;
+		display: flex;
+		position: relative;
+		z-index: 2;
+	}
+	.all-waves {
+		bottom: 0;
+		// max-height: 1050px;
+		@include get-vw(height, 1050px, );
+	}
+	.waves {
+		bottom: 0;
+	}
+}
+
+
+.all-waves {
+	position: absolute;	
+	width: 100%;
+	z-index: 1;		
+	display: flex;
+	
+}
+.wave {
+	position: absolute;
+	width: 100%;	
+	height: 100%;
+	// opacity: 0.8;
+}

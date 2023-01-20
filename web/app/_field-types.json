@@ -1,0 +1,448 @@
+/*
+ *	This File is for standardized fields for Prismic
+ *
+ *	 - You can copy / paste any of these objects out
+ *	   of this file and use them for your custom types
+ *	   within the Prismic definitions.
+ *	 - Note: ALWAYS include the UID field as it'll help
+ *	   determine the routing for the templates.
+ *
+ * -------------------------------------------------- */
+
+/*
+ *	Reserved Content Type Reference
+ *
+ *	 - Follow these naming conventions for any reserved
+ *	   types that this project might use.
+ *
+ * -------------------------------------------------- */
+{
+	/* ----- Singles - Name / ID ----- */
+	"Home": "home", // Required
+	"Article Landing": "single_articles",
+	"Not Found": "single_not_found", // Required
+	"Site Settings": "site_settings", // Required
+	"Product Template": "single_products",
+	"Product Categories": "product_categories",
+
+	/* ----- Types ----- */
+	"Navigation": "navigation", // Required
+	"Page": "page", // Required
+	"Articles": "articles",
+	"Categories": "categories",
+	"Authors": "authors",
+	"Tags": "tags"
+}
+
+/*
+ *	Default Object
+ *
+ * -------------------------------------------------- */
+{
+	"Main": {
+		/*
+		 *	Title field, you should probably include this
+		 *
+		 * -------------------------------------------------- */
+		"title": {
+			"type": "Text",
+			"config": {
+				"label": "Title",
+	        	"placeholder": "Page Title...",
+				"useAsTitle": true
+			}
+		}
+	},
+
+	/*
+	 *	Post Metadata
+	 *
+	 *	- This should be included on every content item, as
+	 *	  the UID field will determine the routing and data
+	 *	  return.
+	 *
+	 * -------------------------------------------------- */
+	"Metadata & SEO": {
+		"uid": {
+			"type": "UID",
+			"config": {
+				"label": "Page Slug"
+			}
+		},
+		"meta_title": {
+			"type": "Text",
+			"config": {
+				"label": "Alternate Page Title",
+				"placeholder": "Alternate Page Title..."
+			}
+		},
+		"meta_description": {
+			"type": "Text",
+			"config": {
+				"label": "Description",
+				"placeholder": "Page Description..."
+			}
+		},
+		"meta_image": {
+			"type": "Image",
+			"config": {
+				"label": "Social Media Image",
+				"constraint": {
+					"width": 1200
+				}
+			}
+		}
+	}
+}
+
+/*
+ *	Home Page Starter
+ *
+ * -------------------------------------------------- */
+{
+  	"Home": {
+    	"title": {
+	      	"type": "Text",
+	      	"config": {
+	        	"label": "Title",
+	        	"placeholder": "Page Title...",
+	        	"useAsTitle": true
+	      	}
+	    }
+  	},
+  	"Metadata & SEO": {
+  		"uid": {
+	      	"type": "UID",
+	      	"config": {
+	        	"label": "Page Slug"
+	      	}
+	    },
+  		"meta_title": {
+			"type": "Text",
+			"config": {
+				"label": "Alternate Page Title",
+				"placeholder": "Alternate Page Title..."
+			}
+		},
+		"meta_description": {
+			"type": "Text",
+			"config": {
+				"label": "Description",
+				"placeholder": "Page Description..."
+			}
+		},
+		"meta_image": {
+			"type": "Image",
+			"config": {
+				"label": "Social Media Image",
+				"constraint": {
+					"width": 1200
+				}
+			}
+		}
+	}
+}
+
+/*
+ *	Page Template Starter
+ *
+ * -------------------------------------------------- */
+{
+  	"Page": {
+    	"title": {
+	      	"type": "Text",
+	      	"config": {
+	        	"label": "Title",
+	        	"placeholder": "Page Title...",
+	        	"useAsTitle": true
+	      	}
+	    }
+  	},
+  	"Metadata & SEO": {
+  		"uid": {
+	      	"type": "UID",
+	      	"config": {
+	        	"label": "Page Slug"
+	      	}
+	    },
+		"page_template" : {
+			"type" : "Select",
+			"config" : {
+				"options" : [ "page", "example" ],
+				"default_value" : "page",
+				"label" : "Page Template"
+			}
+		},
+  		"meta_title": {
+			"type": "Text",
+			"config": {
+				"label": "Alternate Page Title",
+				"placeholder": "Alternate Page Title..."
+			}
+		},
+		"meta_description": {
+			"type": "Text",
+			"config": {
+				"label": "Description",
+				"placeholder": "Page Description..."
+			}
+		},
+		"meta_image": {
+			"type": "Image",
+			"config": {
+				"label": "Social Media Image",
+				"constraint": {
+					"width": 1200
+				}
+			}
+		}
+	}
+}
+
+/*
+ *	Site Settings
+ *	 - name the single "Site Settings" so it's slug is "site_settings"
+ *
+ * -------------------------------------------------- */
+{
+	"Settings": {
+		"title": {
+	      	"type": "Text",
+	      	"config": {
+	        	"label": "Title",
+	        	"placeholder": "Page Title...",
+	        	"useAsTitle": true
+	      	}
+	    },
+		"favicon": {
+			"type": "Image",
+			"config": {
+				"label": "Favicon",
+				"constraint": {
+					"width": null,
+					"height": null
+				},
+				"thumbnails": [
+					{
+						"name": "310x310",
+						"width": 310,
+						"height": 310
+					},
+					{
+						"name": "310x150",
+						"width": 310,
+						"height": 150
+					},
+					{
+						"name": "196x196",
+						"width": 196,
+						"height": 196
+					},
+					{
+						"name": "192x192",
+						"width": 192,
+						"height": 192
+					},
+					{
+						"name": "180x180",
+						"width": 180,
+						"height": 180
+					},
+					{
+						"name": "152x152",
+						"width": 152,
+						"height": 152
+					},
+					{
+						"name": "150x150",
+						"width": 150,
+						"height": 150
+					},
+					{
+						"name": "144x144",
+						"width": 144,
+						"height": 144
+					},
+					{
+						"name": "128x128",
+						"width": 128,
+						"height": 128
+					},
+					{
+						"name": "120x120",
+						"width": 120,
+						"height": 120
+					},
+					{
+						"name": "96x96",
+						"width": 96,
+						"height": 96
+					},
+					{
+						"name": "76x76",
+						"width": 76,
+						"height": 76
+					},
+					{
+						"name": "70x70",
+						"width": 70,
+						"height": 70
+					},
+					{
+						"name": "57x57",
+						"width": 57,
+						"height": 57
+					},
+					{
+						"name": "32x32",
+						"width": 32,
+						"height": 32
+					}
+				]
+			}
+		}
+	},
+	"Analytics": {
+		"fb_app_id": {
+			"type": "Text",
+			"config": {
+				"label": "Facebook App ID",
+				"placeholder": "Facebook App ID"
+			}
+		},
+		"fb_pixel": {
+			"type": "Text",
+			"config": {
+				"label": "Facebook Pixel ID",
+				"placeholder": "Facebook Pixel ID"
+			}
+		},
+		"ga_id": {
+			"type": "Text",
+			"config": {
+				"label": "Google Analytics ID",
+				"placeholder": "Google Analytics ID"
+			}
+		}
+	},
+  	"Metadata & SEO": {
+  		"uid": {
+	      	"type": "UID",
+	      	"config": {
+	        	"label": "Page Slug"
+	      	}
+	    }
+	}
+}
+
+/*
+ *	Navigation Type
+ *
+ * -------------------------------------------------- */
+{
+	"Navigation": {
+		"navigation_label": {
+			"type": "Text",
+			"config": {
+				"label": "Label",
+				"placeholder": "Label...",
+				"useAsTitle": true
+			}
+		},
+	    "uid": {
+	      	"type": "UID",
+	      	"config": {
+	        	"label": "Navigation Slug"
+	      	}
+	    },
+		"nav": {
+			"type": "Slices",
+			"fieldset": "Slice zone",
+			"config": {
+				"choices": {
+					"nav_item": {
+						"type": "Slice",
+						"fieldset": "Top-level Nav Item",
+						"description": "Top-level navigation link",
+						"icon": "insert_link",
+						"non-repeat": {
+							"title": {
+								"type": "Text",
+								"config": {
+									"label": "Link Title",
+									"placeholder": "Enter Link Title..."
+								}
+							},
+							"link": {
+								"type": "Link",
+								"config": {
+									"label": "Link URL",
+									"placeholder": "Select Link..."
+								}
+							},
+							"custom": {
+								"type": "Text",
+								"config": {
+									"label": "Custom Link URL",
+									"placeholder": "Will be Printed verbatim..."
+								}
+							}
+						}
+					},
+					"nav_item_with_sub": {
+						"type": "Slice",
+						"fieldset": "Nav Item with Sub Nav",
+						"description": "Navigation link with sub navigation",
+						"icon": "insert_link",
+						"non-repeat": {
+							"title": {
+								"type": "Text",
+								"config": {
+									"label": "Link Title",
+									"placeholder": "Enter Link Title..."
+								}
+							},
+							"link": {
+								"type": "Link",
+								"config": {
+									"label": "Link URL",
+									"placeholder": "Select Link..."
+								}
+							},
+							"custom": {
+								"type": "Text",
+								"config": {
+									"label": "Custom Link URL",
+									"placeholder": "Will be Printed verbatim..."
+								}
+							}
+						},
+						"repeat": {
+							"title": {
+								"type": "Text",
+								"config": {
+									"label": "Sub Nav Link Label",
+									"placeholder": "Enter Sub Nav Link Title..."
+								}
+							},
+							"link": {
+								"type": "Link",
+								"config": {
+									"label": "Sub Nav Link",
+									"placeholder": "Select Sub Nav Link..."
+								}
+							},
+							"custom": {
+								"type": "Text",
+								"config": {
+									"label": "Custom Link URL",
+									"placeholder": "Will be Printed verbatim..."
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,299 @@
+#mini-cart {
+	position: fixed;
+	min-width: 568px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow-y: auto;
+	top: 0;
+	right: 0;
+	background: #FAFAFA;
+	padding-top: 24px;
+	z-index: 110;
+	justify-content: space-between;
+	opacity: 0;
+	visibility: hidden;
+	.button {
+		width: 100%;
+		height: 71px;
+		background: #E1C8EF;
+		border: 2px solid #1C2E3D;
+		border-radius: 5px;
+		font-family: 'Obviously';
+		font-size: 16px;
+		line-height: 25px;			
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-transform: uppercase;
+		color: #1C2E3D;
+		transition: all .2s $ease-in-out-sine;
+		html:not(.touch) & {
+			&:hover {
+				background: #434B91;
+				border-color: #E1C8EF;
+				color: #E1C8EF;
+			}
+		}
+	}
+	.empty-wrapper {
+		// opacity: 0;
+		// visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #FAFAFA;
+		z-index: 3;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		padding: 118px 32px 60px;
+		> p {
+			// font-family: 'Obviously';
+			font-size: 24px;
+			line-height: 38px;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			text-transform: uppercase;
+			color: #1E2832;
+			@include get-vw(margin-bottom, 34px);
+			width: 30%;
+		}
+	}
+	.empty-cart-img {
+		position: absolute;
+		height: 15.5vw;
+		width: 100%;
+		bottom: 0;
+		overflow: hidden;
+	}
+	
+	.top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 24px 24px;
+		border-bottom: 1px solid #D4D4D4;
+		z-index: 4;
+		p {
+			// font-family: 'Obviously';			
+			font-size: 24px;
+			line-height: 38px;		
+			text-transform: uppercase;
+			color: #414B96;
+		}
+		
+	}
+	.products-wrapper {
+		padding: 8px 32px 0;
+		flex: 1;
+		overflow-y: auto;
+		
+	}
+	.product {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid #D4D4D4;
+		padding-bottom: 24px;
+		margin-top: 24px;		
+		.img-wrapper {
+			width: 100px;
+			height: 100px;			
+			border-radius: 5px;
+			margin-right: 16px;
+			overflow: hidden;
+			background: #EDB877;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.left {
+			display: flex;
+		}
+		.inner {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.product-name {
+			font-family: 'Obviously';
+			font-size: 14px;
+			line-height: 22px;
+			text-transform: uppercase;
+			color: #1E2832;
+		}
+		.line-item-subtitle {			
+			font-family: 'Degular';
+			font-size: 16px;
+			line-height: 100%;
+			display: flex;
+			align-items: center;
+			text-transform: uppercase;
+			color: #1E2832;
+			margin-top: 10px;
+		}		
+		.increment-wrapper {
+			width: 93px;
+			height: 25px;		
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			overflow: hidden;
+			.increment {				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 24px;
+				height: 100%;				
+				path {
+					transition: all .2s $ease-in-out-sine;
+				}
+				html:not(.touch) & {
+					&:hover {
+						path {
+							fill: #E1C8EF;
+						}
+					}
+				}
+			}
+			.decrease {				
+				svg {
+					width: 23px;
+					
+				}
+			}
+			.increase {				
+				svg {
+					width: 24px;
+					
+				}
+			}
+			.count {
+				// font-family: 'Obviously';
+				font-size: 14px;
+				line-height: 1;								
+				text-transform: uppercase;
+				color: #1E2832;
+			}
+		}
+		.right {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+		.top-rigth {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+		.price {
+			font-size: 16px;
+			line-height: 1.3;
+			color: #000000;
+			text-transform: uppercase;
+			display: flex;
+			.compare-at-price {
+				padding-right: 4px;
+				text-decoration-line: line-through;							
+				color: #848484;
+			}
+		}
+		.discount-message {
+			// font-family: 'Degular';
+			font-size: 16px;
+			line-height: 1;		
+			text-transform: uppercase;
+			color: #FF3838;
+			padding-top: 10px;
+		}
+		.remove {
+			// font-family: 'Degular';			
+			font-size: 16px;
+			line-height: 1;	
+			text-transform: uppercase;
+			color: #E16F80;
+		}
+	}
+	.totals {
+		padding: 18px 32px;
+		background: #FDF2E2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: sticky;
+		bottom: 0;
+		width: 100%;
+	}
+	.row {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-bottom: 16px;
+		.row-label {
+			// font-family: 'Obviously';
+			font-size: 14px;
+			line-height: 22px;			
+			text-transform: uppercase;
+			color: #1E2832;
+		}
+		.checkout-text {
+			font-family: 'Degular';
+			font-size: 16px;
+			line-height: 1;						
+			text-transform: uppercase;
+			color: #1C2E3D;
+		}
+		.discount {
+			font-family: 'Degular';
+			font-size: 16px;
+			line-height: 1;			
+			text-transform: uppercase;
+			color: #FF3838;
+		}
+		.row-value {
+			font-family: 'Degular';
+			font-size: 16px;
+			line-height: 1;
+			text-transform: uppercase;
+			color: #1C2E3D;
+		}
+	}
+	form {
+		width: 100%;
+		margin-bottom: 24px;
+		.button {
+			width: 100%;
+		}
+	}	
+	@include bp-767 {
+		min-width: 100%;
+		.top {
+			p {
+				font-size: 24px;
+			}
+		}
+		.product {
+			padding-bottom: 24px;
+			margin-top: 24px;
+		}
+		.empty-wrapper {
+			p {
+				width: 41.3vw;
+			}
+		}
+		.empty-cart-img {
+			height: 45vw;
+		}
+		.price {
+			.compare-at-price {
+				display: none;
+			}
+		}
+	}
+}

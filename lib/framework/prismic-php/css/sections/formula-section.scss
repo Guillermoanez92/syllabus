@@ -1,0 +1,80 @@
+.formula-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	@include get-vw(padding-top, 64px, 52px);
+	@include get-vw(padding-bottom, 229px, 184px);
+	height: calc(var(--vh, 1vh) * 100);
+	.bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		height: 100%;
+	}
+	h3 {
+		z-index: 1;
+		font-family: $fieldWork;
+		line-height: 1.10;
+		letter-spacing: -0.04em;
+		color: #E1DDEA;
+		text-align: center;
+		@include get-vw(font-size, 56px, 48px);
+		@include get-vw(max-width, 458px, 400px);
+		strong {
+			font-family: $ivyModeItalic;
+			line-height: 1.10;
+			letter-spacing: -0.04em;
+			@include get-vw(font-size, 56px, 48px);
+		}
+	}
+	.inner {
+		width: 100%;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include get-vw(padding-left, 416px, 332px);
+		@include get-vw(padding-right, 416px, 332px);
+		@include get-vw(margin-top, 226px, 180px);
+	}
+	.col-left,.col-right {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		p {
+			font-family: $fieldWorkLt;
+			line-height: 1;
+			letter-spacing: -0.04em;
+			color: #DAD0FF;
+			position: relative;
+			white-space: nowrap;
+			@include get-vw(font-size, 24px, 18px);
+			@include get-vw(margin-bottom, 48px, 42px);
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:hover {
+				svg {
+					transform: translatex(-100%);
+				}
+			}
+		}
+		span {
+			position: absolute;
+			width: 100%;
+			left: 0;
+			bottom: -13px;
+			overflow-x: hidden;
+			height: 3.5px;
+			background-image: url(https://cdn.shopify.com/s/files/1/0377/9883/8316/files/Vector_6.png?v=1673896772);
+			background-repeat: repeat-x;
+			background-size: auto 100%;
+			background-position: 8% 50%;
+		}
+	}
+}
