@@ -360,3 +360,41 @@
 		}
 	}
 }
+
+.aspect-ratio-tiles {
+	p {
+		font-weight: bold;
+		font-size: 40px;
+		text-transform: uppercase;
+	}
+	.grid {
+		padding: 20px;
+		display: flex;
+		//grid-template-columns: 1fr 1fr 1fr;
+		//grid-template-rows: 1fr 1fr 1fr;
+		gap: 45px;
+		width: 100%;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.tile {
+		width: 30%;
+		aspect-ratio: 3 / 4;
+		border: 2px solid red;
+		&:nth-child(3n+3) {
+			background: #010101;
+		}
+		&:nth-child(6n+1) {
+			background: #00142d;
+		}
+		@include bp-959 {
+			width: calc(50% - 25px);
+			&:nth-child(even) {
+				background: #010101;
+			}
+			&:nth-child(6n+1) {
+				background: transparent;
+			}
+		}
+	}
+}

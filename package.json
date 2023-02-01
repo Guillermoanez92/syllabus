@@ -64,6 +64,7 @@
     "embla-carousel": "^5.0.1",
     "form-serialize": "^0.7.2",
     "gsap": "^3.8.0",
+    "klaviyo-subscribe": "^1.0.0",
     "lodash.throttle": "^4.1.1",
     "moment": "^2.29.4",
     "quicklink": "^2.0.0",
