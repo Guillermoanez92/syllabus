@@ -435,6 +435,14 @@
 				position: absolute;
 				left: 0;
 				top: 0;
+				border: 2px #000000 dashed;
+				transition: .2s all $ease-in-out-sine;
+				&:hover {
+					border: 2px solid green;
+				}
+				&:not(:checked) {
+					border: 2px solid green;
+				}
 				&:after {
 					content: "✓";
 					position: absolute;
@@ -443,7 +451,6 @@
 					top: 0;
 					height: 100%;
 					width: 100%;
-					border: 1px solid green;
 				}
 			}
 			input[type=checkbox]:checked {
@@ -454,17 +461,15 @@
 			}
 
 		}
-
-
 		input {
 			padding: 5px;
 			height: 32px;
-			background: #FFFFFF;
 			border-radius: 5px;
-			border: 2px #000000 dashed;
-			width: 100%;
 			transition: .23s all $ease-in-out-sine;
+			width: 100%;
+			border: 2px #000000 dashed;
 			color: #585689;
+			background: #FFFFFF;
 			&:not(:placeholder-shown) {
 				background: #FFFFFF;
 				border: 2px solid green;
@@ -483,16 +488,16 @@
 			}
 			&:-webkit-autofill {
 				border: 2px solid green;
-				background: #FFFFFF;
+				background: #FFFFFF !important;
 				color: #585689;
-				-webkit-box-shadow: #FFFFFF;
+				-webkit-box-shadow: 0 0 0px 1000px white inset;
 				-webkit-text-fill-color: #585689;
 				&:focus, &:active {
 					border: 2px solid green;
-					background: #FFFFFF;
+					background: #FFFFFF !important;
 					color: #585689;
 					transition: .23s all $ease-in-out-sine;
-					-webkit-box-shadow: #FFFFFF;
+					-webkit-box-shadow: 0 0 0px 1000px white inset;
 					-webkit-text-fill-color: #585689;
 				}
 
@@ -508,6 +513,40 @@
 			resize: none;
 			box-sizing: border-box;
 			outline: none;
+			font-size: 18px;
+			color: #585689;
+			&::placeholder {
+				color: transparent;
+			}
+			&:not(:placeholder-shown) {
+				border: 2px solid green,
+			}
+			&:hover {
+				border: 2px solid green;
+			}
+			&:focus {
+				border: 2px solid green;
+			}
+			&:active {
+				border: 2px solid green;
+			}
+
+			&:-webkit-autofill {
+				border: 2px solid green;
+				background: #FFFFFF;
+				color: #585689;
+				-webkit-box-shadow: #FFFFFF;
+				-webkit-text-fill-color: #585689;
+				&:focus, &:active {
+					border: 2px solid green;
+					background: #FFFFFF;
+					color: #585689;
+					transition: .23s all $ease-in-out-sine;
+					-webkit-box-shadow: #FFFFFF;
+					-webkit-text-fill-color: #585689;
+				}
+
+			}
 		}
 	}
 	label {

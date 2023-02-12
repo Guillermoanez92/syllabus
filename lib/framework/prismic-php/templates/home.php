@@ -36,12 +36,10 @@ echo "</pre>";w
 			<input type="email" name="email" id="email" placeholder="Email">
 		</div>
 		<div class="input-block">
-			<textarea type="text" name="textarea" id="textarea">
-				Remember, be nice.
-			</textarea>
+			<textarea type="text" name="textarea" id="textarea" placeholder="textarea"></textarea>
 		</div>
 		<div class="input-block checkbox">
-			<input id="checkbox" class="input checkbox" type="checkbox" name="checkbox"  placeholder="Checkbox" checked/>
+			<input id="checkbox" class="input checkbox" type="checkbox" name="checkbox" checked/>
 		</div>
 	</form>
 </div>
