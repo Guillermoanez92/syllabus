@@ -366,6 +366,7 @@
 		font-weight: bold;
 		font-size: 40px;
 		text-transform: uppercase;
+		line-height: 1;
 	}
 	.grid {
 		padding: 20px;
@@ -397,4 +398,123 @@
 			}
 		}
 	}
+}
+.input-elements {
+	padding: 50px;
+	p {
+		font-family: "Roboto Light", sans-serif;
+		font-weight: bold;
+		font-size: 40px;
+		text-transform: uppercase;
+		line-height: 1;
+	}
+	.input-wrapper {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 12px;
+		width: 50%;
+		max-width: 300px;
+
+	}
+	.input-block {
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+		width: 100%;
+		&.checkbox {
+			margin-left: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			max-width: 24px;
+			input[type=checkbox] {
+				height: 24px;
+				width: 24px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				&:after {
+					content: "✓";
+					position: absolute;
+					transform: translate(-50%);
+					left: 50%;
+					top: 0;
+					height: 100%;
+					width: 100%;
+					border: 1px solid green;
+				}
+			}
+			input[type=checkbox]:checked {
+				&::after
+				{
+					content:"";
+				}
+			}
+
+		}
+
+
+		input {
+			padding: 5px;
+			height: 32px;
+			background: #FFFFFF;
+			border-radius: 5px;
+			border: 2px #000000 dashed;
+			width: 100%;
+			transition: .23s all $ease-in-out-sine;
+			color: #585689;
+			&:not(:placeholder-shown) {
+				background: #FFFFFF;
+				border: 2px solid green;
+			}
+			&::placeholder {
+				color: transparent;
+			}
+			&:hover {
+				border: 2px solid green;
+			}
+			&:focus {
+				border: 2px solid green;
+			}
+			&:active {
+				border: 2px solid green;
+			}
+			&:-webkit-autofill {
+				border: 2px solid green;
+				background: #FFFFFF;
+				color: #585689;
+				-webkit-box-shadow: #FFFFFF;
+				-webkit-text-fill-color: #585689;
+				&:focus, &:active {
+					border: 2px solid green;
+					background: #FFFFFF;
+					color: #585689;
+					transition: .23s all $ease-in-out-sine;
+					-webkit-box-shadow: #FFFFFF;
+					-webkit-text-fill-color: #585689;
+				}
+
+			}
+		}
+		textarea {
+			height: 88px;
+			border-radius: 5px;
+			border: 2px #000000 dashed;
+			background: #FFFFFF;
+			width: 100%;
+			padding: 12px 20px;
+			resize: none;
+			box-sizing: border-box;
+			outline: none;
+		}
+	}
+	label {
+		font-family: "Al Bayan", sans-serif;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 1.3;
+	}
+
 }
