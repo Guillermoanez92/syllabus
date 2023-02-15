@@ -10,7 +10,7 @@ echo "</pre>";w
 /* --------------- */
 ?>
 <h1>Guille's Syllabus</h1>
-<div class="aspect-ratio-tiles" style="display: none">
+<div class="aspect-ratio-tiles">
 	<p>1 b</p>
 	<div class="grid">
 		<div class="tile"></div>
@@ -42,6 +42,31 @@ echo "</pre>";w
 			<input id="checkbox" class="input checkbox" type="checkbox" name="checkbox" checked/>
 		</div>
 	</form>
+</div>
+<div class="css-animation">
+	<p>2 b</p>
+	<div class="container-inner">
+		<div class="container">
+			<?php foreach($data->div_repeater as $block){ ?>
+				<div class="empty-div">
+
+				</div>
+			<?php } ?>
+		</div>
+	</div>
+
+</div>
+<div class="css-animation perspective">
+	<p>2 c</p>
+	<div class="container">
+		<div class="container-inner">
+		<?php foreach($data->div_repeater as $block){ ?>
+			<div class="empty-div">
+
+			</div>
+		<?php } ?>
+		</div>
+	</div>
 </div>
 <?php
 /* ----- Home JSON+LD Schema ----- */
