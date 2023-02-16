@@ -45,8 +45,8 @@ echo "</pre>";w
 </div>
 <div class="css-animation">
 	<p>2 b</p>
-	<div class="container-inner">
-		<div class="container">
+	<div class="container">
+		<div class="container-inner">
 			<?php foreach($data->div_repeater as $block){ ?>
 				<div class="empty-div">
 

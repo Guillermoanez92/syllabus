@@ -565,11 +565,21 @@
 		align-items: flex-end;
 		justify-content: center;
 		width: 900px;
-		height: 400px;
+		height: 800px;
+		padding-top: 400px;
 		margin: 0 auto;
 		background: #537895;
 		border-radius: 15px;
 		border: 2px solid #87ceeb;
+	}
+	.container-inner {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		height: 400px;
+		width: 100%;
+		border: 3px dashed deeppink;
+		border-radius: 15px;
 	}
 	.empty-div {
 		display: flex;
@@ -578,7 +588,7 @@
 		width: 18px;
 		height: 18px;
 		position: relative;
-		animation: divmove 3s infinite;
+		animation: divmove 1s infinite;
 		background: white;
 		border: 1px solid white;
 		border-radius: 5px;
@@ -616,32 +626,35 @@
 			background: #537895;
 			border-radius: 15px;
 			border: 2px solid #87ceeb;
-			transform-style: preserve-3d;
 		}
 		.container-inner {
 			display: flex;
 			align-items: flex-end;
 			justify-content: center;
-			transform-style: preserve-3d;
 			height: 400px;
 			width: 100%;
 			border: 3px dashed deeppink;
 			border-radius: 15px;
-			perspective: 3000px;
-			perspective-origin: 50% 0;
+			transform-style: preserve-3d;
+			perspective: 1500px;
+			perspective-origin: 50% -700%;
 		}
 		.empty-div {
+			//transform-style: preserve-3d;
+			//perspective: 100px;
+			//transform: perspective(100px) rotateY(45deg);
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			width: 18px;
 			height: 18px;
 			position: relative;
-			animation-duration: 3s;
+			animation-duration: 1.5s;
 			animation-iteration-count: infinite;
 			background: white;
 			border: 1px solid cadetblue;
 			border-radius: 5px;
+
 			@for $i from 1 through 10 {
 				&:nth-child(10n+#{$i}) {
 					animation-delay: #{$i * .1}s;
@@ -651,6 +664,8 @@
 				animation-delay: 0s;
 			}
 
+
+
 			&:nth-child(10n + 1) {
 				animation-name: divmove5;
 				@keyframes divmove5 {
@@ -658,7 +673,7 @@
 						transform: translate3d(0,0,5px);
 					}
 					50% {
-						transform: translate3d(0,calc(-400px + 18px),5px);
+						transform: translate3d(0,calc(-400px + 18px),5px) rotateX(-90deg);
 					}
 					100% {
 						transform: translate3d(0,0,5px);
@@ -672,7 +687,7 @@
 						transform: translate3d(0,0,10px);
 					}
 					50% {
-						transform: translate3d(0,calc(-400px + 18px),10px);
+						transform: translate3d(0,calc(-400px + 18px),10px) rotateX(-90deg);
 					}
 					100% {
 						transform: translate3d(0,0,10px);
@@ -686,7 +701,7 @@
 						transform: translate3d(0,0,15px);
 					}
 					50% {
-						transform: translate3d(0,calc(-400px + 18px),15px);
+						transform: translate3d(0,calc(-400px + 18px),15px) rotateX(-90deg);
 					}
 					100% {
 						transform: translate3d(0,0,15px);
@@ -700,7 +715,7 @@
 						transform: translate3d(0,0,20px);
 					}
 					50% {
-						transform: translate3d(0,calc(-400px + 18px),20px);
+						transform: translate3d(0,calc(-400px + 18px),20px) rotateX(-90deg);
 					}
 					100% {
 						transform: translate3d(0,0,20px);
@@ -714,7 +729,7 @@
 						transform: translate3d(0,0,25px);
 					}
 					50% {
-						transform: translate3d(0,calc(-400px + 18px),25px);
+						transform: translate3d(0,calc(-400px + 18px),25px) rotateX(-90deg);
 					}
 					100% {
 						transform: translate3d(0,0,25px);
@@ -728,7 +743,7 @@
 						transform: translate3d(0,0,30px);
 					}
 					50% {
-						transform: translate3d(0,calc(-400px + 18px),30px);
+						transform: translate3d(0,calc(-400px + 18px),30px) rotateX(-90deg);
 					}
 					100% {
 						transform: translate3d(0,0,30px);
@@ -742,7 +757,7 @@
 						transform: translate3d(0,0,35px);
 					}
 					50% {
-						transform: translate3d(0,calc(-400px + 18px),35px);
+						transform: translate3d(0,calc(-400px + 18px),35px) rotateX(-90deg);
 					}
 					100% {
 						transform: translate3d(0,0,35px);
@@ -756,7 +771,7 @@
 						transform: translate3d(0,0,40px);
 					}
 					50% {
-						transform: translate3d(0,calc(-400px + 18px),40px);
+						transform: translate3d(0,calc(-400px + 18px),40px) rotateX(-90deg);
 					}
 					100% {
 						transform: translate3d(0,0,40px);
@@ -770,7 +785,7 @@
 						transform: translate3d(0,0,45px);
 					}
 					50% {
-						transform: translate3d(0,calc(-400px + 18px),45px);
+						transform: translate3d(0,calc(-400px + 18px),45px) rotateX(-90deg);
 					}
 					100% {
 						transform: translate3d(0,0,45px);
@@ -784,7 +799,7 @@
 						transform: translate3d(0,0,50px);
 					}
 					50% {
-						transform: translate3d(0,calc(-400px + 18px),50px);
+						transform: translate3d(0,calc(-400px + 18px),50px) rotateX(-90deg);
 					}
 					100% {
 						transform: translate3d(0,0,50px);
