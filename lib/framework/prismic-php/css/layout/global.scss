@@ -560,6 +560,7 @@
 }
 
 .css-animation {
+	display: none;
 	.container {
 		display: flex;
 		align-items: flex-end;
@@ -614,6 +615,7 @@
 	}
 }
 .css-animation {
+	display: none;
 	&.perspective {
 		.container {
 			display: flex;
@@ -807,6 +809,21 @@
 				}
 			}
 		}
+	}
+}
+
+.functions {
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #6AC6C0;
+		border-radius: 15px;
+		border: 1px solid #1a192e;
+		font-family: Helvetica;
+		height: 58px;
+		width: fit-content;
+		padding: 0 18px;
 	}
 }
 

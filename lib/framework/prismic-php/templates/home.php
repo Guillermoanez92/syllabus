@@ -68,6 +68,10 @@ echo "</pre>";w
 		</div>
 	</div>
 </div>
+<div class="functions">
+	<button class="function-btn">Hello</button>
+	<button class="function-btn">Bye</button>
+</div>
 <?php
 /* ----- Home JSON+LD Schema ----- */
 include(views_dir() . "/schema/schema-home.php"); ?>
