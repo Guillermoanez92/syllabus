@@ -43,9 +43,6 @@ echo "</pre>";w
 		</div>
 	</form>
 </div>
-<<<<<<< HEAD
-<div class="p"
-=======
 <div class="css-animation">
 	<p>2 b</p>
 	<div class="container">
@@ -77,26 +74,25 @@ echo "</pre>";w
 </div>
 <div class="new-prep-tabs c-24">
 	<div class="left">
-		<button class="active" data-dog="all">All</button>
-		<button data-dog="real">Real Dogs</button>
-		<button data-dog="comic">Comic Dogs</button>
+		<button class="active" data-tile="all">All</button>
+		<button data-tile="real-dog">Real Dog</button>
+		<button data-tile="comics-dog">Comics Dog</button>
 	</div>
 	<div class="right">
-		<div class="tile" data-dog="comic">
+		<div class="tile" data-dog="comics-dog">
 			<img class="preload bg" src="https://images.prismic.io/syllabus/1082628c-df4b-4c1d-a810-8639941789f0_CatDog.jpeg?auto=compress,format">
 		</div>
-		<div class="tile" data-dog="real">
+		<div class="tile" data-dog="real-dog">
 			<img class="preload bg" src="https://images.prismic.io/syllabus/a2740883-4f08-4ac9-8cf1-95f650efa5d7_AustralianCattleDog-FeaturedImage-1024x615.webp?auto=compress,format">
 		</div>
-		<div class="tile" data-dog="real">
+		<div class="tile" data-dog="real-dog">
 			<img class="preload bg" src="https://images.prismic.io/syllabus/4cb2a621-48aa-4cd2-8daa-d71b5365e51e_husky-wolf-1.webp?auto=compress,format">
 		</div>
-		<div class="tile" data-dog="real">
+		<div class="tile" data-dog="real-dog">
 			<img class="preload bg" src="https://images.prismic.io/syllabus/02638aa3-a025-4528-9a80-e0ce8c7b413a_Pug_FeaturedImage.avif?auto=compress,format">
 		</div>
 	</div>
 </div>
->>>>>>> 7cf2f54181fa254eae48154ee7e44d64df9dab7c
 <?php
 /* ----- Home JSON+LD Schema ----- */
 include(views_dir() . "/schema/schema-home.php"); ?>
