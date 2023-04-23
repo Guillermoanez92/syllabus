@@ -24,7 +24,7 @@ echo "</pre>";w
 		<div class="tile"></div>
 	</div>
 </div>
-<div class="input-elements">
+<div class="input-elements" style="display: none">
 	<p>1 C</p>
 	<form class="input-wrapper">
 		<div class="input-block">
@@ -43,6 +43,7 @@ echo "</pre>";w
 		</div>
 	</form>
 </div>
+<div class="p"
 <?php
 /* ----- Home JSON+LD Schema ----- */
 include(views_dir() . "/schema/schema-home.php"); ?>
